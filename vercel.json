@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "outputDirectory": "dist",
   "rewrites": [
     { "source": "/api/(.*)", "destination": "/app.py" },
     { "source": "/(.*)", "destination": "/$1" }
