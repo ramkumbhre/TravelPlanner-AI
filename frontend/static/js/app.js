@@ -1,5 +1,5 @@
 /* ============================================================
-   TravelBrain AI — frontend
+   TravelPlanner AI — frontend
    Talks to:  POST   /api/travel  { message, thread_id }
               GET    /api/config          credential status
               POST   /api/config          set session keys
@@ -39,7 +39,7 @@
 
   /* ---------------- state ---------------- */
 
-  var THEME_KEY = "travelbrain.theme";
+  var THEME_KEY = "TravelPlanner.theme";
 
   var threadId = null;   // LangGraph conversation thread for the current trip
   var busy = false;
@@ -464,7 +464,7 @@
     head.appendChild(avatar);
 
     var titleBox = el("div", "card-title");
-    titleBox.appendChild(el("strong", null, "TravelPlaner AI"));
+    titleBox.appendChild(el("strong", null, "TravelPlanner AI"));
     titleBox.appendChild(el("small", null, "Plan ready"));
     head.appendChild(titleBox);
 
@@ -487,7 +487,7 @@
       var url = URL.createObjectURL(blob);
       var a = document.createElement("a");
       a.href = url;
-      a.download = "travelbrain-plan.md";
+      a.download = "TravelPlanner-plan.md";
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
